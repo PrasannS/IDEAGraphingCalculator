@@ -10,5 +10,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        //TODO SET UP BUTTON DECLARATIONS AND ON-CLICKS TO LINK TO THE CALC AND GRAPH PAGES
     }
 }

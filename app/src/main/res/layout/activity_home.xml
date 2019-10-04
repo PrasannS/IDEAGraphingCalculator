@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <!--TODO SET THIS PAGE UP TO HAVE TWO BUTTONS THAT WILL LINK YOU TO THE GRAPH AND CALC PAGES-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

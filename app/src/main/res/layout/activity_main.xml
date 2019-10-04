@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CalcActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,8 +38,9 @@
             android:orientation="vertical"
             android:gravity="bottom">
             <!--
-                THIS SECTION IS WHERE YOU WILL WRITE YOUR CODE! MAKE A LINEAR
+                TODO THIS SECTION IS WHERE YOU WILL WRITE YOUR CODE! MAKE A LINEAR
                  LAYOUT, PLACE YOUR BUTTONS INSIDE, AND GIVE THEM ALL AN APPROPRIATE ID
+                 THE BUTTONS TO ADD ARE 1, 2, 3, C, and =
             !-->
 
             <LinearLayout

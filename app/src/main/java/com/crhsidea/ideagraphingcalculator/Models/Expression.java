@@ -1,6 +1,8 @@
 package com.crhsidea.ideagraphingcalculator.Models;
 
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -206,8 +208,8 @@ public class Expression {
         {
             return new LineGraphSeries<DataPoint>();
         }
-    }
-     */
+    }*/
+
     public boolean isSpecialMultiplier(String str){
         switch (str){
             case "π": return true;

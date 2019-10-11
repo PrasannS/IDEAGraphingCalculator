@@ -32,8 +32,10 @@ public class CalcActivity extends AppCompatActivity {
     public ArrayList<Double> numbers = new ArrayList<>();
     String message = "";
 
-    //TODO Here you need to add the IDs of all the buttons you just added
     int[] buttonIDList = {
+            R.id.one,
+            R.id.two,
+            R.id.three,
             R.id.four,
             R.id.five,
             R.id.six,
@@ -44,6 +46,8 @@ public class CalcActivity extends AppCompatActivity {
             R.id.subtract,
             R.id.divide,
             R.id.multiply,
+            R.id.clear,
+            R.id.enter,
             R.id.openbracket,
             R.id.closedbracket,
             R.id.exponent,
@@ -55,7 +59,9 @@ public class CalcActivity extends AppCompatActivity {
             R.id.E
     };
 
-    //TODO Here you need to declare an array of buttons so that it works with buttonIDList no matter how many buttons are added/removed (Hint: Size)
+    Button[] buttons = new Button[buttonIDList.length];
+
+    int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,16 +70,33 @@ public class CalcActivity extends AppCompatActivity {
         numbers.add(0.0);
         e.expressions.add(new Expression(chars, numbers));
 
-        //TODO this is the toughest part, your job is to make a loop so that all of the buttons can be declared and have onClickListeners set
-        // (Hint:Use while loop; Use the onValueInput([button_reference].getText().toString()) to enter the number into the calculator code)
+        i=0;
 
+        while(i<buttonIDList.length){
+            buttons[i]= findViewById(buttonIDList[i]);
+            buttons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onValueInput(((Button)v).getText().toString());
+                }
+            });
+            i++;
+        }
 
-        //TODO declare display, and declare/setOnClick for homebutton
+        display = (EditText) findViewById(R.id.display);
+        homebutton = (Button)findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHomeActivity();
+            }
+        });
 
     }
-
-    //TODO make a method that will open Home Activity
-
+    public void openHomeActivity () {
+        Intent intent1 = new Intent(this, HomeActivity.class);
+        startActivity(intent1);
+    }
 
     public void openThisActivity () {
         Intent intent1 = new Intent(this, CalcActivity.class);
@@ -138,8 +161,7 @@ public class CalcActivity extends AppCompatActivity {
 
     public void show ( boolean a){
         stringshown = e.toString();
-
-        //TODO Set display's text to stringshown
+        display.setText(stringshown);
     }
 
     public void onValueInput (String message){

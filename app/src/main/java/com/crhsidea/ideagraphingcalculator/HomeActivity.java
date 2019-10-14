@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
+    //TODO finish app off so that calc and graph activity become accessible
     Button button;
 
     public void openCalc(){

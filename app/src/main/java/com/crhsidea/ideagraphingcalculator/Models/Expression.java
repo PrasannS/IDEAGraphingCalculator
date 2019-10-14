@@ -3,6 +3,9 @@ package com.crhsidea.ideagraphingcalculator.Models;
 
 import android.util.Log;
 
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -151,8 +154,7 @@ public class Expression {
         }
         return ans;
     }
-
-    /*public LineGraphSeries<DataPoint> graphSolve(String input){
+    public LineGraphSeries<DataPoint> graphSolve(String input){
         Log.d("readInput()", "recieved input to solve: " + input);
         ArrayList<Expression> expressions = new ArrayList<>();
         ArrayList<Double> nums = new ArrayList<Double>();
@@ -208,7 +210,7 @@ public class Expression {
         {
             return new LineGraphSeries<DataPoint>();
         }
-    }*/
+    }
 
     public boolean isSpecialMultiplier(String str){
         switch (str){
